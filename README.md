@@ -4,7 +4,7 @@
 
 Projeto de aplicação web de gerenciamento financeiro pessoal com **Python, Django e PostgreSQL**, planejado com arquitetura modular e interface responsiva.
 
-O nome combina o experimento mental do gato de Schrödinger com *din-din*.
+O nome combina o experimento mental do gato de Schrödinger com *dinheiro*.
 
 > **Status:** planejamento e documentação inicial. A aplicação ainda não está implementada.
 
