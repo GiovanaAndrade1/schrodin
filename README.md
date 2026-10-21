@@ -2,9 +2,9 @@
 
 **Seu dinheiro existe. Provavelmente.**
 
-Aplicação web de gerenciamento financeiro pessoal desenvolvida com **Python e Django**, planejada com arquitetura modular, persistência de dados e interface responsiva.
+Projeto de aplicação web de gerenciamento financeiro pessoal com **Python, Django e PostgreSQL**, planejado com arquitetura modular e interface responsiva.
 
-O nome combina o experimento mental do gato de Schrödinger com *din-din*: seu saldo não precisa continuar sendo um mistério.
+O nome combina o experimento mental do gato de Schrödinger com *din-din*.
 
 > **Status:** planejamento e documentação inicial. A aplicação ainda não está implementada.
 
@@ -19,13 +19,13 @@ O nome combina o experimento mental do gato de Schrödinger com *din-din*: seu s
 **Versão 2:** orçamentos por categoria.  
 **Futuro:** integração com aplicativo mobile.
 
-## Tecnologias previstas
-- **Backend:** Python, Django.
-- **Banco de dados:** definido na etapa de implementação (SQLite pode ser usado localmente).
-- **Frontend:** tecnologia a definir, com design responsivo.
+## Tecnologias definidas
+- **Backend:** Python e Django.
+- **Banco de dados:** PostgreSQL.
+- **Frontend:** tecnologia ainda a definir, com interface responsiva.
 - **Qualidade:** testes automatizados, Git e GitHub.
 
-## Organização
+## Organização atual
 ```text
 schrodin/
 ├── docs/
@@ -33,11 +33,10 @@ schrodin/
 │   ├── data-model.md
 │   └── roadmap.md
 ├── AGENTS.md
-├── .env.example
-├── .gitignore
 └── README.md
 ```
-As pastas de código serão criadas quando a stack de interface e a estrutura Django forem inicializadas.
+
+Pastas de código e arquivos de configuração serão criados quando a implementação começar.
 
 ## Documentação
 - [Requisitos e regras de negócio](docs/requirements.md)
@@ -45,10 +44,10 @@ As pastas de código serão criadas quando a stack de interface e a estrutura Dj
 - [Roadmap](docs/roadmap.md)
 
 ## Desenvolvimento
-O primeiro passo técnico será validar o diagrama entidade-relacionamento (DER), criar o projeto Django e implementar os modelos e testes. **Ainda não há comandos de instalação ou execução**, pois a aplicação não foi inicializada.
+O próximo passo é validar o DER, inicializar o projeto Django e implementar os modelos e testes com PostgreSQL. Ainda não há comandos de instalação ou execução, pois a aplicação não foi inicializada.
 
 ## Segurança
-Nunca versionar credenciais ou dados financeiros reais. O arquivo `.env.example` contém apenas valores ilustrativos.
+Credenciais e dados financeiros reais não devem ser versionados.
 
 ## Licença
 A licença ainda não foi definida.
