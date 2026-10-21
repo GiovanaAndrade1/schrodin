@@ -1,6 +1,6 @@
 # Modelo de dados preliminar
 
-> Proposta de arquitetura; nenhum modelo Django foi implementado ainda.
+> Proposta de arquitetura para **PostgreSQL**; nenhum modelo Django ou tabela foi implementado ainda.
 
 ## Entidades
 - **User**: usuário autenticado (modelo configurável do Django).
@@ -26,4 +26,4 @@
 Saldo realizado da conta = opening_balance + soma(receitas realizadas) - soma(despesas realizadas).
 
 ## Próxima etapa
-Validar as decisões acima, desenhar o DER e implementar modelos, migrações e testes no Django. Transferências exigirão modelagem específica antes da implementação.
+Validar as decisões acima, desenhar o DER e implementar modelos, migrações e testes Django com PostgreSQL. Transferências exigirão modelagem específica antes da implementação.
