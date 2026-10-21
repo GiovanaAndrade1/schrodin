@@ -1,0 +1,22 @@
+# Ambiente virtual Python
+.venv/
+venv/
+
+# Variáveis de ambiente e credenciais
+.env
+.env.*
+!.env.example
+
+# Arquivos gerados pelo Python
+__pycache__/
+*.pyc
+
+# Banco de dados local
+*.sqlite3
+
+# Arquivos do editor
+.vscode/
+.idea/
+
+# Dependências do frontend
+node_modules/

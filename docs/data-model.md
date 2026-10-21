@@ -1,6 +1,6 @@
 # Modelo de dados preliminar
 
-> Proposta de arquitetura para **PostgreSQL**; nenhum modelo Django ou tabela foi implementado ainda.
+> Proposta de arquitetura; nenhum modelo Django ou tabela foi implementado ainda.
 
 ## Entidades
 - **User**: usuário autenticado (modelo configurável do Django).
