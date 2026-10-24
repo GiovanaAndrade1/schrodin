@@ -59,7 +59,7 @@ uv run python manage.py migrate
 uv run python manage.py runserver
 ```
 
-`GET http://localhost:8000/health` responde `{"status": "ok"}`.
+`GET http://localhost:8000/health` consulta o banco: responde `200 {"status": "ok", "database": "ok"}`, ou `503` se o Postgres estiver fora do ar.
 
 ## Segurança
 Credenciais e dados financeiros reais não devem ser versionados.
