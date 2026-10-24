@@ -43,6 +43,9 @@ schrodin/
 ```
 
 ## Documentação
+- [Regras de negócio](docs/business-rules.md): a spec, com o código de cada regra (`CON-1`, `FAT-6`…)
+- [Glossário](docs/glossary.md): o nome de cada conceito no código
+- [Cenários BDD](features/): 869 cenários em Gherkin, um arquivo por funcionalidade
 - [Requisitos e regras de negócio](docs/requirements.md)
 - [Modelo de dados preliminar](docs/data-model.md)
 - [Roadmap](docs/roadmap.md)
