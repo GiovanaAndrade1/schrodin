@@ -40,7 +40,7 @@ Feature: Account creation
     Then there is no currency field
     And the opening balance comes prefilled with "R$ 0,00"
 
-  @GER-6 @DIA-3
+  @GER-6 @DIA-3 @later
   Scenario: An account records when it was created, regardless of the opening date
     Given the device clock reads 2026-03-15T13:00:00Z
     When I create the account "Itaú" of kind "checking" with opening balance R$ 500.00 on 2026-01-01
