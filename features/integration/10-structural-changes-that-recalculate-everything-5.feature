@@ -26,13 +26,13 @@ Feature: Archiving an account by resolving the pending items
     When I archive the account "Wallet"
     Then the operation is blocked with the message "Resolve the pending items before archiving"
     And I see the pending items:
-      | pending item                        | offered solution          |
-      | actual balance of R$ 120.00         | transfer the balance      |
-      | "Market" overdue (2026-03-10)       | move or delete            |
-      | "Gift" planned (2026-03-28)         | move or delete            |
-      | active recurring series "Allowance" | end the series            |
-      | payment account of card "Black"     | change the card's account |
-      | daily budget source                 | change the source         |
+      | pending item                        | offered action                   |
+      | Balance of R$ 120.00                | Transfer the balance             |
+      | Overdue "Market" on 2026-03-10      | Move or delete the planned entry |
+      | Planned "Gift" on 2026-03-28        | Move or delete the planned entry |
+      | Recurring series "Allowance" active | End the series                   |
+      | Pays card "Black"                   | Change the card's account        |
+      | It is the daily budget source       | Change the daily budget source   |
     When I move the expense "Market" to account "Nubank"
     And I delete the expense "Gift"
     And I end the series "Allowance"

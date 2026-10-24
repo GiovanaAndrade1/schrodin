@@ -130,8 +130,8 @@ Feature: A statement from the first purchase to the archived card
   @integration @FAT-12 @FAT-9 @GER-5 @LIM-1 @CON-4 @INV-5
   Scenario: Deleting the partial payment of an already rolled-over statement
     Given the purchase "Laptop" of R$ 3,000.00 on card "Purple" on 2026-03-15
-    And the payment of R$ 1,000.00 of the 2026-04 statement of card "Purple" from account "Nubank" on 2026-04-09, confirmed
     And today is 2026-04-11
+    And the payment of R$ 1,000.00 of the 2026-04 statement of card "Purple" from account "Nubank" on 2026-04-09, confirmed
     And I answered "I didn't pay" for the 2026-04 statement of card "Purple"
     And the 2026-05 statement of card "Purple" has carried-over balance R$ 2,000.00
     When I delete the payment of R$ 1,000.00 of the 2026-04 statement of card "Purple"

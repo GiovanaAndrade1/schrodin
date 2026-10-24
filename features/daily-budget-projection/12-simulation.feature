@@ -187,7 +187,7 @@ Feature: Simulation "can I buy it?"
     When I simulate a purchase of R$ 50.00 in account "Wallet" on 2026-03-18
     And the account "Wallet" gets archived
     And I turn the simulation into an entry titled "Market"
-    Then the operation is blocked with the message "Account Wallet is archived"
+    Then the operation is blocked with the message "Account 'Wallet' is archived. Unarchive it to make changes"
     And no entry is created
 
   @SIM-1 @error

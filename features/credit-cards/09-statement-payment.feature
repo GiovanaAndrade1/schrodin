@@ -115,4 +115,4 @@ Feature: Statement payment
     Given the account "Old" of kind "checking" with opening balance R$ 0.00 on 2026-01-01
     And the account "Old" is archived
     When I pay R$ 200.00 of the 2026-03 statement of card "Purple" from account "Old" on 2026-03-15
-    Then the operation is blocked with the message "An archived account doesn't accept entries"
+    Then the operation is blocked with the message "Account 'Old' is archived. Unarchive it to make changes"

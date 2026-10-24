@@ -23,10 +23,10 @@ Feature: Entries and archived entities
 
     Examples:
       | entry                          | source            | message                                    |
-      | the expense "Test" of R$ 10.00 | to account "Itaú" | An archived account doesn't accept entries |
-      | the income "Test" of R$ 10.00  | to account "Itaú" | An archived account doesn't accept entries |
-      | the expense "Test" of R$ 10.00 | to card "Retired" | An archived card doesn't accept entries    |
-      | the refund "Test" of R$ 10.00  | to card "Retired" | An archived card doesn't accept entries    |
+      | the expense "Test" of R$ 10.00 | to account "Itaú" | Account 'Itaú' is archived. Unarchive it to make changes |
+      | the income "Test" of R$ 10.00  | to account "Itaú" | Account 'Itaú' is archived. Unarchive it to make changes |
+      | the expense "Test" of R$ 10.00 | to card "Retired" | Card 'Retired' is archived. Unarchive it to make changes |
+      | the refund "Test" of R$ 10.00  | to card "Retired" | Card 'Retired' is archived. Unarchive it to make changes |
 
   @LAN-9 @GER-5
   Scenario: An entry of an archived account is still visible in the history

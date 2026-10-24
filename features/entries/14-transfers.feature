@@ -33,9 +33,9 @@ Feature: Transfers between accounts, statement payment and credit withdrawal
 
     Examples:
       | from                  | to               | message                                    |
-      | from account "Itaú"   | account "Nubank" | An archived account doesn't accept entries |
-      | from account "Nubank" | account "Itaú"   | An archived account doesn't accept entries |
-      | from account "Nubank" | card "Retired"   | An archived card doesn't accept entries    |
+      | from account "Itaú"   | account "Nubank" | Account 'Itaú' is archived. Unarchive it to make changes |
+      | from account "Nubank" | account "Itaú"   | Account 'Itaú' is archived. Unarchive it to make changes |
+      | from account "Nubank" | card "Retired"   | Card 'Retired' is archived. Unarchive it to make changes |
 
   @TRF-1 @FAT-7 @TRF-3 @IND-2
   Scenario: A transfer to the card pays the statement and is not an expense

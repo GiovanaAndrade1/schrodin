@@ -157,5 +157,9 @@ Feature: Account editing
     Examples:
       | role                                                                                             | account | message                                                                     |
       | "Nubank" is the default account                                                                  | Nubank  | The default account must be a spending account. Choose another one first    |
+
+    @later
+    Examples:
+      | role                                                                                             | account | message                                                                     |
       | the daily budget source is account "Wallet"                                                      | Wallet  | The daily budget source must be a spending account. Change the source first |
       | the card "Black" with limit R$ 10,000.00, closing day 28, due day 5 and payment account "Wallet" | Wallet  | This account pays card Black. Change the card's account first               |

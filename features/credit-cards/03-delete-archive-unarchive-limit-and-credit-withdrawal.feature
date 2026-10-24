@@ -93,7 +93,7 @@ Feature: Card deletion, archiving, unarchiving, limit change and credit withdraw
   Scenario: A purchase cannot be added to an archived card
     Given the card "Purple" is archived
     When I add the purchase "Coffee" of R$ 8.50 to card "Purple" on 2026-03-15
-    Then the operation is blocked with the message "An archived card doesn't accept entries"
+    Then the operation is blocked with the message "Card 'Purple' is archived. Unarchive it to make changes"
 
   @CAR-7 @CON-11
   Scenario: A card with no name collision is unarchived

@@ -160,7 +160,7 @@ Feature: Entry editing
     When I edit the note of the 2026-03-15 adjustment of account "Nubank" to "bank difference"
     Then the 2026-03-15 adjustment of account "Nubank" has the note "bank difference"
     When I try to edit the amount of the 2026-03-15 adjustment of account "Nubank" to R$ 40.00
-    Then the operation is blocked with the message "An adjustment's amount can't be edited. Delete it and adjust again"
+    Then the operation is blocked with the message "An adjustment can't be edited. Delete it and adjust again"
 
   @LAN-8 @GER-6
   Scenario: Editing keeps the creation date and updates the modification date

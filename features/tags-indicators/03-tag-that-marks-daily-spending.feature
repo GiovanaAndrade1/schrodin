@@ -93,7 +93,7 @@ Feature: Tag that automatically marks "daily spending"
   Scenario: Moving a flagged expense to a saving account removes the flag; moving it back does not flag it again
     Given the expense "Market" of R$ 85.40 in account "Wallet" on 2026-03-14, confirmed, with the tag "groceries"
     When I edit the expense "Market" to account "Reserve"
-    Then I see the warning "An expense in a saving account can't be daily spending; the flag was removed"
+    Then I see the warning "This entry is no longer daily spending"
     And the expense "Market" is not daily spending
     And the expense "Market" has the tags "groceries"
     When I edit the expense "Market" to account "Wallet"

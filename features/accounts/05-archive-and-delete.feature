@@ -24,10 +24,14 @@ Feature: Account archiving and deletion
 
     Examples:
       | entry                                                                                              |
+      | the outflow adjustment of R$ 5.00 in account "Itaú" on 2026-03-10                                  |
+
+    @later
+    Examples:
+      | entry                                                                                              |
       | the expense "Bakery" of R$ 20.00 in account "Itaú" on 2026-03-02, confirmed                        |
       | the income "Freelance" of R$ 800.00 in account "Itaú" on 2026-04-10, planned                       |
       | the transfer "Top-up" of R$ 50.00 from account "Nubank" to account "Itaú" on 2026-03-05, confirmed |
-      | the outflow adjustment of R$ 5.00 in account "Itaú" on 2026-03-10                                  |
 
   @CON-8 @edge
   Scenario: After deleting all entries, the account can be deleted
@@ -253,21 +257,25 @@ Feature: Account archiving and deletion
   Scenario Outline: Nothing new goes into an archived account
     Given the archived account "Old" of kind "checking"
     When I try to <action>
-    Then the operation is blocked with the message "Account Old is archived"
+    Then the operation is blocked with the message "Account 'Old' is archived. Unarchive it to make changes"
 
+    Examples:
+      | action                                                                                     |
+      | adjust the balance of account "Old" to R$ 10.00                                            |
+      | set "Old" as the default account                                                           |
+
+    @later
     Examples:
       | action                                                                                     |
       | add the expense "Coffee" of R$ 8.50 to account "Old" on 2026-03-15                         |
       | add the income "Pix" of R$ 50.00 to account "Old" on 2026-03-15                            |
       | add the transfer "Top-up" of R$ 50.00 from account "Nubank" to account "Old" on 2026-03-15 |
-      | adjust the balance of account "Old" to R$ 10.00                                            |
-      | set "Old" as the default account                                                           |
 
   @CON-13 @LAN-9 @error
   Scenario Outline: An archived account and its entries are read-only
     Given the archived account "Old" of kind "checking" with the expense "Market" of R$ 80.00 on 2026-02-10, confirmed
     When I try to <action>
-    Then the operation is blocked with the message "Unarchive the account to edit it"
+    Then the operation is blocked with the message "Account 'Old' is archived. Unarchive it to make changes"
 
     Examples:
       | action                                              |

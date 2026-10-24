@@ -51,7 +51,7 @@ Feature: Card installment prepayment
       | discount  | result                                                                             |
       | R$ 600.00 | the 2026-06 statement of card "Purple" has total R$ 300.00                         |
       | R$ 600.01 | the operation is blocked with the message "The discount can't exceed R$ 600.00"    |
-      | R$ 0,00   | the operation is blocked with the message "The discount must be greater than zero" |
+      | R$ 0.00   | the operation is blocked with the message "The discount must be greater than zero" |
 
   @PAR-5 @error @edge
   Scenario: With no future installments there is nothing to prepay

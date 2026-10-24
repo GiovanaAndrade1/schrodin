@@ -103,7 +103,7 @@ Feature: Editing and deleting occurrences of a series
     And the new series "Rent" has 11 occurrences, from 2026-04-10 to 2027-02-10
     And the occurrences of the new series "Rent" are:
       | date       | amount      | status    | position |
-      | 2026-04-10 | R$ 2,100.00 | overdue   | 12-02    |
+      | 2026-04-10 | R$ 2,100.00 | overdue   | 2/12     |
       | 2026-05-10 | R$ 2,000.00 | confirmed | 3/12     |
       | 2026-06-10 | R$ 2,100.00 | planned   | 4/12     |
     And the 2026-03-10 occurrence of the original series shows position "1/12"

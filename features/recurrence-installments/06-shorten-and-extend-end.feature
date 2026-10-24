@@ -49,7 +49,8 @@ Feature: Series end change
     And the 2026-04-01, 2026-05-01, 2026-06-01 and 2026-07-01 occurrences of series "Gym" are "confirmed"
     When I change the end of series "Gym" to 2 occurrences
     Then the 2026-05-01, 2026-06-01 and 2026-07-01 occurrences of series "Gym" are still "confirmed"
-    And the 2026-05-01, 2026-06-01 and 2026-07-01 occurrences show no position
+    And the 2026-05-01 occurrence of series "Gym" shows position "2/2"
+    And the 2026-06-01 and 2026-07-01 occurrences show no position
     And the 2026-08-01 and 2026-09-01 occurrences no longer exist
     And the actual balance of account "Nubank" is R$ 520.00
 

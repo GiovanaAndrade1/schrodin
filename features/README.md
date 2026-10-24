@@ -2,7 +2,7 @@
 
 Executable spec: Gherkin scenarios in English (no `# language:` header), one folder per area.
 Every scenario is tagged with the rule ids it proves (see [../docs/business-rules.md](../docs/business-rules.md)).
-`bun run features` validates the syntax and the tags.
+The scenarios run with `uv run pytest` (see ENG-4).
 
 | Folder | Area |
 |---|---|
