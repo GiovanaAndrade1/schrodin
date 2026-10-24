@@ -3,7 +3,7 @@
 - [x] Definição do nome Schrödin
 - [x] Repositório GitHub e documentação inicial
 - [ ] Validar DER, regras de negócio e estrutura do backend
-- [ ] Inicializar projeto Django e configuração de ambiente
+- [x] Inicializar projeto Django e configuração de ambiente
 - [ ] Implementar autenticação e testes
 - [ ] Implementar contas financeiras
 - [ ] Implementar categorias

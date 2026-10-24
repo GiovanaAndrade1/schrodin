@@ -6,7 +6,7 @@ Projeto de aplicação web de gerenciamento financeiro pessoal com **Python, Dja
 
 O nome combina o experimento mental do gato de Schrödinger com *dinheiro*.
 
-> **Status:** planejamento e documentação inicial. A aplicação ainda não está implementada.
+> **Status:** projeto Django inicializado com PostgreSQL. As funcionalidades ainda não estão implementadas.
 
 ## Funcionalidades planejadas — MVP
 - Autenticação e isolamento dos dados por usuário.
@@ -28,15 +28,19 @@ O nome combina o experimento mental do gato de Schrödinger com *dinheiro*.
 ## Organização atual
 ```text
 schrodin/
+├── backend/
+│   ├── apps/
+│   │   ├── core/        modelo base e rotas comuns
+│   │   └── users/       usuário com fuso horário
+│   ├── config/          settings e urls do Django
+│   ├── manage.py
+│   └── pyproject.toml
 ├── docs/
-│   ├── requirements.md
-│   ├── data-model.md
-│   └── roadmap.md
+├── docker-compose.yml
+├── .env.example
 ├── AGENTS.md
 └── README.md
 ```
-
-Pastas de código e arquivos de configuração serão criados quando a implementação começar.
 
 ## Documentação
 - [Requisitos e regras de negócio](docs/requirements.md)
@@ -44,7 +48,18 @@ Pastas de código e arquivos de configuração serão criados quando a implement
 - [Roadmap](docs/roadmap.md)
 
 ## Desenvolvimento
-O próximo passo é validar o DER, inicializar o projeto Django e implementar os modelos e testes com PostgreSQL. Ainda não há comandos de instalação ou execução, pois a aplicação não foi inicializada.
+Pré-requisitos: Python 3.14, [uv](https://docs.astral.sh/uv/) e Docker.
+
+```bash
+cp .env.example .env
+docker compose up -d db
+cd backend
+uv sync
+uv run python manage.py migrate
+uv run python manage.py runserver
+```
+
+`GET http://localhost:8000/health` consulta o banco: responde `200 {"status": "ok", "database": "ok"}`, ou `503` se o Postgres estiver fora do ar.
 
 ## Segurança
 Credenciais e dados financeiros reais não devem ser versionados.
